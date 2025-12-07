@@ -1,3 +1,16 @@
+/* Font-face declarations */
+@font-face {
+    font-family: 'Sage';
+    src: url('/assets/fonts/sage-bold.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sherpa';
+    src: url('/assets/fonts/sherpa.woff2') format('woff2');
+    font-display: swap;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -21,8 +34,8 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.5;
+    font-family: 'Sherpa', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 18px;
     color: var(--text-color);
     background-color: var(--white);
     margin: 0 auto;
@@ -93,6 +106,7 @@ header .container {
 }
 
 .hero h1 {
+    font-family: 'Sage', serif;
     font-size: 44px;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -100,6 +114,7 @@ header .container {
 }
 
 .hero h2 {
+    font-family: 'Sherpa', sans-serif;
     font-size: 14px;
     font-weight: normal;
     margin-bottom: 1rem;
@@ -108,6 +123,7 @@ header .container {
 }
 
 .hero .tagline {
+    font-family: 'Sherpa', sans-serif;
     font-size: 12px;
     line-height: 1.5em;
     max-width: 800px;
@@ -125,6 +141,7 @@ section:nth-child(even) {
 }
 
 section h2 {
+    font-family: 'Sage', serif;
     font-size: 24px;
     font-weight: bold;
     color: var(--text-color);
@@ -138,6 +155,7 @@ section h2 {
 .research-brief {
     max-width: 900px;
     margin: 0 auto;
+    font-family: 'Sherpa', sans-serif;
     font-size: 12px;
     line-height: 1.5em;
 }
@@ -160,6 +178,7 @@ section h2 {
     box-shadow: none;
     text-align: justify;
     line-height: 1.5em;
+    font-family: 'Sherpa', sans-serif;
 }
 
 .research-areas li strong {
@@ -211,6 +230,7 @@ section h2 {
 }
 
 .team-member h3 {
+    font-family: 'Sherpa', sans-serif;
     font-size: 14px;
     color: var(--text-color);
     margin-bottom: 0.3rem;
@@ -218,6 +238,7 @@ section h2 {
 }
 
 .team-member .role {
+    font-family: 'Sherpa', sans-serif;
     color: var(--text-color-dim);
     font-weight: normal;
     margin-bottom: 0.5rem;
@@ -225,6 +246,7 @@ section h2 {
 }
 
 .team-member .bio {
+    font-family: 'Sherpa', sans-serif;
     font-size: 12px;
     color: var(--text-color);
     margin-bottom: 1rem;
@@ -272,6 +294,7 @@ section h2 {
 }
 
 .publication h3 {
+    font-family: 'Sherpa', sans-serif;
     font-size: 14px;
     color: var(--text-color);
     margin-bottom: 0.5rem;
@@ -280,6 +303,7 @@ section h2 {
 }
 
 .publication .authors {
+    font-family: 'Sherpa', sans-serif;
     color: var(--text-color);
     margin-bottom: 0.3rem;
     font-size: 12px;
@@ -287,6 +311,7 @@ section h2 {
 }
 
 .publication .venue {
+    font-family: 'Sherpa', sans-serif;
     color: var(--text-color-dim);
     margin-bottom: 1rem;
     font-size: 12px;
@@ -294,6 +319,7 @@ section h2 {
 }
 
 .publication .abstract {
+    font-family: 'Sherpa', sans-serif;
     font-size: 12px;
     color: var(--text-color);
     margin-bottom: 1rem;
@@ -337,6 +363,7 @@ section h2 {
 }
 
 .openings-content > p {
+    font-family: 'Sherpa', sans-serif;
     font-size: 12px;
     text-align: justify;
     margin-bottom: 2rem;
@@ -358,6 +385,7 @@ section h2 {
 }
 
 .opportunity h3 {
+    font-family: 'Sherpa', sans-serif;
     color: var(--text-color);
     font-size: 14px;
     font-weight: bold;
@@ -365,6 +393,7 @@ section h2 {
 }
 
 .opportunity p {
+    font-family: 'Sherpa', sans-serif;
     color: var(--text-color);
     line-height: 1.5em;
     font-size: 12px;
@@ -382,6 +411,7 @@ section h2 {
 }
 
 .contact-info h3 {
+    font-family: 'Sherpa', sans-serif;
     color: var(--text-color);
     margin-bottom: 1rem;
     font-size: 14px;
@@ -389,6 +419,7 @@ section h2 {
 }
 
 .contact-info p {
+    font-family: 'Sherpa', sans-serif;
     font-size: 12px;
     line-height: 1.5em;
 }
