@@ -1,0 +1,150 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="container">
+        <h1>SALSA</h1>
+        <h2>Scalable, Autonomous Learning for Sustainable Agents</h2>
+        <p class="tagline">Building autonomous learning systems that scale responsibly and sustain real-world impact</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Our Research</h2>
+        <div class="research-brief">
+            <p>
+                The SALSA research group focuses on developing autonomous learning systems that can scale to complex real-world problems 
+                while maintaining sustainability and responsible AI principles. Our research spans multiple areas including:
+            </p>
+            <ul class="research-areas">
+                <li><strong>Scalable Learning:</strong> Developing algorithms that can efficiently learn from large-scale data and complex environments</li>
+                <li><strong>Autonomous Decision Making:</strong> Creating systems that can make intelligent decisions with minimal human intervention</li>
+                <li><strong>Sustainable AI:</strong> Ensuring our systems are energy-efficient and environmentally responsible</li>
+                <li><strong>Real-World Impact:</strong> Applying our research to solve practical problems in various domains</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="team">
+    <div class="container">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+            {% for member in site.team %}
+            <div class="team-member">
+                {% if member.image %}
+                <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+                {% else %}
+                <div class="placeholder-image">{{ member.name | slice: 0 }}</div>
+                {% endif %}
+                <h3>{{ member.name }}</h3>
+                <p class="role">{{ member.role }}</p>
+                {% if member.bio %}
+                <p class="bio">{{ member.bio }}</p>
+                {% endif %}
+                <div class="member-links">
+                    {% if member.website %}<a href="{{ member.website }}" target="_blank">Website</a>{% endif %}
+                    {% if member.github %}<a href="https://github.com/{{ member.github }}" target="_blank">GitHub</a>{% endif %}
+                    {% if member.twitter %}<a href="https://twitter.com/{{ member.twitter }}" target="_blank">Twitter</a>{% endif %}
+                    {% if member.scholar %}<a href="{{ member.scholar }}" target="_blank">Scholar</a>{% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Publications Section -->
+<section id="publications" class="publications">
+    <div class="container">
+        <h2>Publications</h2>
+        <div class="publications-list">
+            {% assign sorted_pubs = site.publications | sort: 'year' | reverse %}
+            {% for pub in sorted_pubs %}
+            <div class="publication">
+                <h3>{{ pub.title }}</h3>
+                <p class="authors">{{ pub.authors }}</p>
+                <p class="venue"><em>{{ pub.venue }}</em>, {{ pub.year }}</p>
+                {% if pub.abstract %}
+                <p class="abstract">{{ pub.abstract }}</p>
+                {% endif %}
+                <div class="pub-links">
+                    {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank">PDF</a>{% endif %}
+                    {% if pub.arxiv %}<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>{% endif %}
+                    {% if pub.code %}<a href="{{ pub.code }}" target="_blank">Code</a>{% endif %}
+                    {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" target="_blank">DOI</a>{% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- News Section -->
+<section id="news" class="news">
+    <div class="container">
+        <h2>Latest News</h2>
+        <div class="twitter-feed">
+            <a class="twitter-timeline" 
+               data-height="600" 
+               data-theme="light" 
+               href="https://twitter.com/salsa_research?ref_src=twsrc%5Etfw">
+               Tweets by SALSA Research
+            </a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</section>
+
+<!-- Openings Section -->
+<section id="openings" class="openings">
+    <div class="container">
+        <h2>Join Our Team</h2>
+        <div class="openings-content">
+            <p>
+                We are always looking for talented and motivated researchers to join our team. 
+                If you are interested in autonomous learning, scalable AI, and sustainable systems, we would love to hear from you!
+            </p>
+            
+            <div class="opportunities">
+                <div class="opportunity">
+                    <h3>PhD Positions</h3>
+                    <p>
+                        We have multiple PhD positions available for exceptional candidates interested in reinforcement learning, 
+                        autonomous systems, and sustainable AI. Fully funded positions with competitive stipends.
+                    </p>
+                </div>
+                
+                <div class="opportunity">
+                    <h3>Postdoctoral Researchers</h3>
+                    <p>
+                        Seeking postdoctoral researchers with strong backgrounds in machine learning, deep learning, 
+                        or related areas. Opportunity to lead independent research projects.
+                    </p>
+                </div>
+                
+                <div class="opportunity">
+                    <h3>Research Internships</h3>
+                    <p>
+                        Summer research internships available for undergraduate and master's students. 
+                        Gain hands-on experience working on cutting-edge research projects.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>How to Apply</h3>
+                <p>
+                    To apply or inquire about opportunities, please send your CV, research statement, 
+                    and any relevant materials to: <strong>contact@salsa-research.org</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
