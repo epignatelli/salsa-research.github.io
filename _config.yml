@@ -1,0 +1,26 @@
+title: "SALSA Research Group"
+description: "Scalable, Autonomous Learning for Sustainable Agents"
+baseurl: ""
+url: "https://epignatelli.github.io/salsa-research.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - README.md
+  - LICENSE
+
+# Collections
+collections:
+  team:
+    output: false
+  publications:
+    output: false
